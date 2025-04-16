@@ -1,0 +1,86 @@
+Guia do versionamento: 
+
+git status: 
+Mostra o status das alterações como não rastreadas, modificadas ou encenadas.
+
+git branch main: 
+Mostra as ramificações sendo trabalhadas localmente.
+
+git merge: 
+Mescla linhas de desenvolvimento em conjunto. Este comando é normalmente usado para combinar alterações feitas em dois ramos distintos.
+
+git pull: 
+Atualiza a linha de desenvolvimento local com atualizações de sua contraparte remota.
+
+git push:
+Atualiza o repositório remoto com quaisquer compromissos feitos localmente em uma filial.
+
+git init: 
+Inicializa um novo repositório git e começa a rastrear um diretório existente. Ele adiciona uma subpasta oculta dentro do diretório existente que abriga a estrutura de dados interna necessária para o controle da versão.
+
+git clone: 
+Cria uma cópia local de um projeto que já existe remotamente. O clone inclui todos os arquivos, histórico e
+
+ramos do projeto.
+
+git add: 
+Estágios (stages) de uma mudança. Quaisquer alterações que forem realziadas se tornarão parte do próximo *commit* e uma parte da história do projeto.
+
+git commit: 
+Salva o snapshot para o histórico do projeto e completa o processo de rastreamento de alterações.
+
+Criando um repositorio no meu github pelo gitbranch
+
+# 1. Cria projeto e inicia git
+mkdir meu-projeto
+cd meu-projeto
+git init -b main
+
+# 2. Configura nome e e-mail
+git config --global user.name "Leonardo Comelli"
+git config --global user.email "leonardo@software-ltda.com.br"
+
+# 3. Conecta com GitHub (sem push ainda)
+git remote add origin https://github.com/seu-usuario/repositorio.git
+
+# 4. Cria arquivos e faz commit
+echo "# Meu Projeto" > README.md
+git add .
+git commit -m "Primeiro commit"
+
+# 5. Agora sim, envia pro GitHub
+git push -u origin main
+
+
+Como criar um readme pelo cmd:
+
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+3. Crie o arquivo README.md
+bash
+Copiar
+Editar
+echo "# Nome do Projeto" > README.md
+Se quiser adicionar mais conteúdo, use:
+
+bash
+Copiar
+Editar
+echo "Descrição do projeto aqui" >> README.md
+Ou edite com um editor, tipo:
+
+bash
+Copiar
+Editar
+notepad README.md
+4. Adicione e faça o commit do arquivo
+bash
+Copiar
+Editar
+git add README.md
+git commit -m "Adiciona README"
+5. Envie para o GitHub
+bash
+Copiar
+Editar
+git push origin main
