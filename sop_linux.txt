@@ -1,0 +1,36 @@
+Sistemas operacionais:  Linux
+
+Diretórios e Arquivos
+Criar diretório:
+mkdir ~/compartilhado
+​
+Criar arquivo de texto:
+echo "Arquivo de <nome do aluno>" > ~/compartilhado/<nome_do_aluno>.txt
+​
+Listar arquivos e permissões:
+ls -l ~/compartilhado
+
+Criar novo usuário:
+sudo adduser fic
+​
+Listar usuários da máquina:
+cut -d: -f1 /etc/passwd
+​
+Mudar para outro usuário:
+su - fic
+
+Criar um grupo:
+sudo groupadd desenvolvedores
+​
+Adicionar usuários ao grupo:
+sudo usermod -aG desenvolvedores faculdade
+sudo usermod -aG desenvolvedores fic
+​
+Verificar usuários no grupo:
+getent group desenvolvedores
+
+Alterar dono do diretório:
+sudo chown fic ~/compartilhado
+​
+Alterar grupo do diretório:
+sudo chown :desenvolvedores ~/compartilhado

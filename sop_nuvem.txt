@@ -1,0 +1,69 @@
+Sistemas Operacionais com a Nuvem:
+
+IaaS (Infrastructure as a Service)
+Fornece infraestrutura (servidores, armazenamento, redes) pela nuvem.
+
+Você gerencia o sistema operacional, apps, etc.
+
+Exemplo: AWS EC2, Microsoft Azure, Google Compute Engine.
+
+PaaS (Platform as a Service)
+Fornece plataforma pronta pra desenvolver, testar e rodar aplicações.
+
+Você foca só no código, sem se preocupar com a infra por trás.
+
+Exemplo: Heroku, Google App Engine, Azure App Service.
+
+SaaS (Software as a Service)
+Fornece software pronto via internet, sem precisar instalar nada.
+
+Você só usa o serviço, sem se preocupar com nada técnico.
+
+Exemplo: Gmail, Dropbox, Salesforce.
+
+
+Parte AWS:
+
+1. **Computação**
+
+- **EC2 (Elastic Compute Cloud)**: máquinas virtuais.
+
+3. **Banco de Dados**
+
+- **RDS**: banco de dados relacional gerenciado (MySQL, PostgreSQL, etc).
+
+4. **Rede e CDN**
+
+- **VPC (Virtual Private Cloud)**: rede virtual isolada.
+
+
+Para a criação dentro do Ec2 e do RDS ver no notion do professor 👍
+
+Para conectar o python com mysql:
+
+import mysql.connector
+
+# Conectando ao banco
+conexao = mysql.connector.connect(
+    host="localhost",       # ou IP do servidor
+    user="seu_usuario",     # ex: 'root'
+    password="sua_senha",   # senha do MySQL
+    database="nome_do_banco" # nome do banco que você quer acessar
+)
+
+# Criando um cursor para executar comandos SQL
+cursor = conexao.cursor()
+
+# Exemplo de consulta
+cursor.execute("SELECT * FROM sua_tabela")
+
+# Mostrando resultados
+for linha in cursor.fetchall():
+    print(linha)
+
+# Fechar conexão depois de usar
+cursor.close()
+conexao.close()
+
+
+ou consultar o site do w3school
